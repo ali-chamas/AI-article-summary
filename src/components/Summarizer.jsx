@@ -59,11 +59,11 @@ const handleCopy=(copyUrl)=>{
   return (
     <div className='flex flex-col gap-5  w-full justify-center items-center  my-5 '>
 
-        <div className='flex gap-3 items-center bg-gray-100 p-2 mx-2 rounded-full shadow-lg max-w-[300px]  ' >
+        <div className='flex gap-3 items-center bg-gray-100 p-2 mx-2 rounded-full shadow-lg max-w-[300px] lg:max-w-[700px]  ' >
 
           <img src={link} alt="" />
 
-        <input type="url" required placeholder='insert link here' className='p-3  text-left border-none  placeholder:text-slate-500 placeholder:text-lg outline-none bg-transparent ' value={article.url} onChange={(e)=>setArticle({ ...article, url: e.target.value })} />
+        <input type="url" required placeholder='insert link here' className='p-3  text-left border-none  placeholder:text-slate-500 placeholder:text-lg outline-none bg-transparent max-w-[150px] lg:min-w-[400px] ' value={article.url} onChange={(e)=>setArticle({ ...article, url: e.target.value })} />
 
         <button disabled={isFetching} type='submit' className=' p-2   rounded-full hover:opacity-90 disabled:opacity-60 text-xl' onClick={handleSubmit}><AiOutlineSend/></button>
         </div>
