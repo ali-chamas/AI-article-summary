@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {AiFillCopy,AiFillLike} from 'react-icons/ai'
+import {AiFillCopy,AiOutlineSend} from 'react-icons/ai'
 import {BiArrowBack} from 'react-icons/bi'
 import link from '../assets/link.svg'
 import loader from '../assets/loader.svg'
@@ -59,13 +59,13 @@ const handleCopy=(copyUrl)=>{
   return (
     <div className='flex flex-col gap-5  w-full justify-center items-center  my-5 '>
 
-        <div className='flex gap-3 items-center bg-gray-100 p-2 mx-2 rounded-full shadow-lg ' >
+        <div className='flex gap-3 items-center bg-gray-100 p-2 mx-2 rounded-full shadow-lg max-w-[300px]  ' >
 
           <img src={link} alt="" />
 
-        <input type="url" required placeholder='insert link here' className='p-3 lg:w-[400px] text-left border-none  placeholder:text-slate-500 placeholder:text-lg outline-none bg-transparent ' value={article.url} onChange={(e)=>setArticle({ ...article, url: e.target.value })} />
+        <input type="url" required placeholder='insert link here' className='p-3  text-left border-none  placeholder:text-slate-500 placeholder:text-lg outline-none bg-transparent ' value={article.url} onChange={(e)=>setArticle({ ...article, url: e.target.value })} />
 
-        <button disabled={isFetching} type='submit' className=' bg-gradient-to-tr from-slate-500 to-slate-700 text-white p-2  rounded-full hover:opacity-90 disabled:opacity-60 text-sm ' onClick={handleSubmit}>Summarize</button>
+        <button disabled={isFetching} type='submit' className=' p-2   rounded-full hover:opacity-90 disabled:opacity-60 text-xl' onClick={handleSubmit}><AiOutlineSend/></button>
         </div>
 
         
